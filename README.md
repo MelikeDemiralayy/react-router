@@ -1,8 +1,23 @@
-# React + Vite
+# React-Router
+Bu proje, **React Router** kullanarak sayfa yönlendirmelerini ve dinamik rota yapılarını anlamak amacıyla oluşturulmuştur. Öğrendiğim kavramları ve deneyimlerimi bu README dosyasında dokumente edeceğim.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Kullanılan Teknolojiler
+- React.js
+- React Router DOM
 
-Currently, two official plugins are available:
+## React-Router Nedir, Neden Kullanılır?
+**React Router**, React tabanlı uygulamalarda sayfa yönlendirmelerini yönetmek için kullanılan güçlü bir kütüphanedir. Tek sayfa uygulamalarında (SPA) kullanıcı deneyimini iyileştirir ve farklı sayfalara kesintisiz geçiş sağlar.
+- Sayfalar arası geçişte sayfanın tamamı yenilenmez sadece iilgili bileşen yeniden render edilir.
+- URL parametreleri, sorgu dizeleri ve dinamik yollar kolayca yönetilebilir.
+- Alt bileşenler ve iç içe geçmiş yönlendirmeler desteklenir (Nested Routes)
+- React state yönetimi ile sorunsuz şekilde entegre olur.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Temel Kavramları
+- **Routes ve Route:** Uygulamanın farklı URL yollarını tanımlamak için kullanılır.
+- **BrowserRouter:** Tarayıcıdaki adres çubuğunu kullanarak yönlendirme yapar.
+- **Link ve NavLink:** Sayfalar arası geçiş için kullanılır.
+- **useNavigate:** Programatik olarak sayfalar arası geçiş sağlar.
+- **useParams:** URL parametrelerine erişim sağlar.
+- **Outlet:** Nested Routes için alt bileşenlerin render edilmesini sağlar.
+
+
