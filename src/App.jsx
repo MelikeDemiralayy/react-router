@@ -1,5 +1,3 @@
-import React from 'react'
-import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Product from './pages/Product'
 import About from './pages/About'
