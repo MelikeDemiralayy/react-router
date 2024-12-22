@@ -10,6 +10,7 @@ import ContactInfo from './components/ContactInfo'
 import NotFound from './components/NotFound'
 import JobsLayout from './layout/JobsLayout'
 import Jobs, { jobsLoader } from './pages/Jobs'
+import JobDetails, { jobDetailsLoader } from './components/JobDetails'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -27,6 +28,7 @@ const App = () => {
             <Route index element={<Jobs />} loader={jobsLoader} />
           </Route>
           <Route path='*' element={<NotFound />} />
+          <Route path='/jobs/:id' element={<JobDetails/>} loader={jobDetailsLoader}/>
         </Route>
       </>
     )
@@ -50,3 +52,4 @@ const App = () => {
 }
 
 export default App
+//1:33
