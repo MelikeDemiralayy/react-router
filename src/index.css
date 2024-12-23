@@ -75,6 +75,7 @@ a.active{
  display: flex;
  justify-content: space-between;
  gap: 20px;
+ padding: 80px;
 
 }
 
@@ -84,6 +85,15 @@ a.active{
   background: #efefef;
   color: #000;
   padding: 10px;
+}
+
+.job-layout h2 {
+padding-left: 80px;
+}
+
+.layout-p{
+  padding-left: 80px;
+  
 }
 
 .jobs-detail{
