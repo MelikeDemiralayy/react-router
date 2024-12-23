@@ -11,6 +11,7 @@ import NotFound from './components/NotFound'
 import JobsLayout from './layout/JobsLayout'
 import Jobs, { jobsLoader } from './pages/Jobs'
 import JobDetails, { jobDetailsLoader } from './components/JobDetails'
+import Error from './components/Error'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -25,10 +26,10 @@ const App = () => {
             <Route path='form' element={<ContactForm />} />
           </Route>
           <Route path='jobs' element={<JobsLayout />}>
-            <Route index element={<Jobs />} loader={jobsLoader} />
+            <Route index element={<Jobs />} loader={jobsLoader} errorElement={<Error/>} />
           </Route>
           <Route path='*' element={<NotFound />} />
-          <Route path='/jobs/:id' element={<JobDetails/>} loader={jobDetailsLoader}/>
+          <Route path='/jobs/:id' element={<JobDetails/>} loader={jobDetailsLoader} errorElement ={<Error/>}/>
         </Route>
       </>
     )
@@ -52,4 +53,3 @@ const App = () => {
 }
 
 export default App
-//1:33

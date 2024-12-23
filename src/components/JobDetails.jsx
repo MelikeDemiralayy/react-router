@@ -7,7 +7,7 @@ const JobDetails = () => {
     const JobDetails = useLoaderData();
     
   return (
-    <div>
+    <div className="jobs-detail">
      <p><b>Job Title:</b>{JobDetails.title} </p>
      <p><b>Salary:</b>{JobDetails.salary} </p>
      <p><b>Job Title:</b>{JobDetails.location} </p>
@@ -22,7 +22,10 @@ export default JobDetails;
 
 export const jobDetailsLoader = async({params} ) =>{
      const {id} = params;
-     const response = await fetch("http://localhost:5000/jobs " +id);
+     const response = await fetch(`http://localhost:5001/jobs/${id}`);
+     if(!response.ok){
+         throw Error ("Could not found job details")
+     }
      return response.json();
       
 }

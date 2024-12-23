@@ -7,7 +7,7 @@ const Jobs = () => {
   return (
     <div className="job">
       {jobsData.map((job) =>{
-        return <Link>
+        return <Link to={job.id.toString()} key={job.id}>
         <h4>{job.title} </h4>
         <p>{job.location} </p>
         </Link>
@@ -20,6 +20,9 @@ export default Jobs;
 
 
 export  const jobsLoader = async() =>{
-    const response = await fetch("http://localhost:5000/jobs");
+    const response = await fetch("http://localhost:5001/jobs");
+    if(!response.ok){
+      throw Error;
+    }
     return response.json();
 }
